@@ -6,7 +6,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 
-const Auth = () => {
+interface AuthProps {
+  onAuthSuccess: () => void;
+}
+
+const Auth = ({ onAuthSuccess }: AuthProps) => {
   const [isLogin, setIsLogin] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
@@ -53,7 +57,8 @@ const Auth = () => {
         description: "You are now logged in.",
       });
 
-      navigate("/");
+      onAuthSuccess(); // Set authentication state to true
+      navigate("/"); // Navigate to home page
     } catch (error) {
       toast({
         title: "Error",
