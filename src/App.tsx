@@ -8,6 +8,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Home from "@/pages/Home";
 import Auth from "@/pages/Auth";
+import Courses from "@/pages/Courses";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,12 @@ const App = () => {
               path="/"
               element={
                 isAuthenticated ? <Home /> : <Navigate to="/auth" replace />
+              }
+            />
+            <Route
+              path="/courses"
+              element={
+                isAuthenticated ? <Courses /> : <Navigate to="/auth" replace />
               }
             />
             <Route
