@@ -34,22 +34,40 @@ const FeaturedCourse = ({ title, description, duration, rating }: {
 const Home = () => {
   const featuredCourses = [
     {
-      title: "Introduction to Web Development",
-      description: "Learn the fundamentals of web development with HTML, CSS, and JavaScript.",
-      duration: "8 weeks",
+      title: "Java Full Stack Training",
+      description: "Master Java, Spring Boot, Hibernate, and modern web development frameworks for full-stack applications.",
+      duration: "16 weeks",
       rating: 4.8,
     },
     {
-      title: "Data Science Fundamentals",
-      description: "Master the basics of data analysis and visualization.",
-      duration: "10 weeks",
+      title: "Python Full Stack Training",
+      description: "Learn Python, Django, Flask, and front-end technologies for building complete web applications.",
+      duration: "14 weeks",
       rating: 4.9,
     },
     {
-      title: "UX Design Principles",
-      description: "Learn how to create user-centered designs that engage and delight.",
-      duration: "6 weeks",
+      title: "Advanced AI",
+      description: "Deep dive into artificial intelligence, machine learning, and neural networks with practical projects.",
+      duration: "12 weeks",
+      rating: 4.9,
+    },
+    {
+      title: "Data Science Training",
+      description: "Master data analysis, visualization, and machine learning using Python, R, and industry tools.",
+      duration: "16 weeks",
       rating: 4.7,
+    },
+    {
+      title: "Amazon Web Services (AWS)",
+      description: "Comprehensive AWS cloud training covering EC2, S3, Lambda, and cloud architecture best practices.",
+      duration: "10 weeks",
+      rating: 4.8,
+    },
+    {
+      title: "DevOps Training",
+      description: "Learn CI/CD, Docker, Kubernetes, and modern DevOps practices for efficient software delivery.",
+      duration: "12 weeks",
+      rating: 4.8,
     },
   ];
 
@@ -63,7 +81,7 @@ const Home = () => {
               Welcome to Your Learning Journey
             </h1>
             <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-              Discover courses tailored to help you achieve your goals and advance your career.
+              Discover professional courses designed to accelerate your career in technology.
             </p>
             <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
               <Button className="w-full sm:w-auto flex items-center justify-center gap-2">
@@ -77,7 +95,7 @@ const Home = () => {
 
       {/* Featured Courses Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Courses</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-8">Our Professional Courses</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredCourses.map((course, index) => (
             <FeaturedCourse key={index} {...course} />
